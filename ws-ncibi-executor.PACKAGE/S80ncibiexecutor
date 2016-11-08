@@ -1,0 +1,155 @@
+#!/bin/bash
+
+if [ -f /etc/ncibi-executor.config ]; then
+    . /etc/ncibi-executor.config
+fi
+
+if [ -z "$NCIBI_HOME" ]; then
+    export NCIBI_HOME="/usr/share/ncibi"
+fi
+
+if [ -z "$NCIBI_EXECUTOR_INSTANCES" ]; then
+    export NCIBI_EXECUTOR_INSTANCES=2
+fi
+
+CPATH="$NCIBI_HOME"/bin/ws-executor.jar
+
+for jar in $( ls "$NCIBI_HOME"/lib/* )
+do
+    CPATH=$CPATH:$jar
+done
+
+function resubmit()
+{
+	cd "$NCIBI_HOME"/bin
+	java -classpath "$CPATH" org.ncibi.main.TaskExecutorMain resubmit
+}
+
+function start() 
+{
+    rm -f "$NCIBI_HOME"/pids/*
+    echo "Starting $NCIBI_EXECUTOR_INSTANCES ncibi-executor(s)..."
+    cd "$NCIBI_HOME"/bin
+    > "$NCIBI_HOME"/logs/executor.out
+    chmod a+r "$NCIBI_HOME"/logs/executor.out
+    export PATH="$PATH:$NCIBI_HOME/bin"
+    if [ -f "$NCIBI_HOME"/main_server ]; then
+    	resubmit
+    fi
+    for i in $(seq $NCIBI_EXECUTOR_INSTANCES)
+    do
+        ./run_executor.sh &
+    done
+}
+
+function getExecutorPids()
+{
+    ps -eo '%p:%a' | grep org.ncibi.main.TaskExecutorMain | grep -v grep | cut -d: -f1
+}
+
+function stop() 
+{
+    echo "Stopping ncibi-executor instances..."
+    pids=$(getExecutorPids)
+    if [ -z "$pids" ]; then
+        echo "  No instances of the ws-ncibi-executor are currently running."
+    else
+        for pid in $pids
+        do
+            echo "  Stopping pid $pid"
+            kill $pid
+        done
+    fi
+}
+
+function restart()
+{
+    stop
+    start
+}
+
+function status()
+{
+    echo "ncibi executors: "
+    pids=$(getExecutorPids)
+    if [ -z "$pids" ]; then
+        echo "  No instances of the ws-ncibi-executor are currently running."
+    else
+        for pid in $pids
+        do
+            echo "  ws-ncibi-executor pid: $pid"
+        done
+    fi
+}
+
+function config()
+{
+    echo "NCIBI_HOME: $NCIBI_HOME"
+    echo "NCIBI_EXECUTOR_INSTANCES: $NCIBI_EXECUTOR_INSTANCES"
+    cd "$NCIBI_HOME"/bin
+    java -classpath "$CPATH" org.ncibi.main.TaskExecutorMain config
+}
+
+function archiveCurrentLog()
+{
+    if [ ! -d "$NCIBI_HOME"/logs ]; then
+        mkdir "$NCIBI_HOME"/logs
+    fi
+
+    if [ -f "$NCIBI_HOME"/logs/executor.out ]; then
+        DATE=`date +%F`
+        if [ ! -f "$NCIBI_HOME"/logs/executor."$DATE" ]; then
+            mv "$NCIBI_HOME"/logs/executor.out "$NCIBI_HOME"/logs/executor."$DATE"
+            chmod a+r "$NCIBI_HOME"/logs/executor."$DATE"
+        else
+            cat "$NCIBI_HOME"/logs/executor.out >> "$NCIBI_HOME"/logs/executor."$DATE"
+        fi
+    fi
+}
+
+function testForNcibiHome()
+{
+    if [ ! -d "$NCIBI_HOME" ]; then
+        echo "$NCIBI_HOME" does not exist, exiting...
+        exit 1
+    fi
+
+    if [ ! -f "$NCIBI_HOME"/bin/ws-executor.jar ]; then
+        echo "$NCIBI_HOME"/bin/ws-executor.jar not found, exiting..."
+        exit 1
+    fi
+    
+    if [ ! -f "$NCIBI_HOME"/bin/run_executor.sh ]; then
+    	echo "$NCIBI_HOME"/bin/run_executor.sh not found, exiting."
+    	exit 1
+    fi
+
+}
+
+testForNcibiHome
+
+case "$1" in
+    start)
+        archiveCurrentLog
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    restart)
+        restart
+        ;;
+    status)
+        status
+        ;;
+    config)
+        config
+        ;;
+    resubmit)
+    	resubmit
+    	;;    
+    *)
+     echo "Usage: $(basename $0) start|stop|restart|status|config"
+     exit 1
+    ;;
+esac

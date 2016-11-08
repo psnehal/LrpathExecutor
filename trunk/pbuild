@@ -1,0 +1,206 @@
+#!/bin/bash
+
+UMMS_URL=https://www.umms.med.umich.edu/codestore/ncibi/projects/config/trunk/src/main/resources
+MVN_BUILD="package"
+HOST="localhost"
+
+if [ -z "$NCIBI_USER" ]; then
+    NCIBI_USER=`whoami`
+fi
+
+function usage()
+{
+    echo "pbuild {production|test|tcbeta|local|web01}[:local] [project]"
+    exit 0
+}
+
+function retrieve()
+{
+    #echo "wget --no-check-certificate --user=$NCIBI_USER --password=\"$SVNPASSWORD\" $UMMS_URL/$1"
+    wget --no-check-certificate --user=$NCIBI_USER --password="$SVNPASSWORD" $UMMS_URL/$1 > /dev/null 2>&1
+}
+
+function loadPropertiesFile()
+{
+    if [ "$PACKAGE_TYPE" = "local" ]; then
+        cp save/$PROPERTIES_FILE src/main/resources
+    else
+        retrieve $PACKAGE_TYPE/$PACKAGE/$PROPERTIES_FILE 
+        mv $PROPERTIES_FILE src/main/resources
+    fi
+}
+
+function gatherFilesForPackage()
+{
+    retrieve $PACKAGE_TYPE/$PACKAGE/files
+    cat files | while read file
+    do
+        if [ ${file:0:6} = "SERVER" ]; then
+            DOWNLOADFILE=`echo $file | cut -d: -f2`
+            retrieve scripts/$DOWNLOADFILE
+            mv $DOWNLOADFILE ../$PACKAGEDIR
+        elif [ ${file:0:7} = "SRENAME" ]; then
+            #
+            # Download and rename
+            #
+            F=`echo $file | cut -d: -f2`
+            R=`echo $file | cut -d: -f3`
+            retrieve scripts/$F
+            mv $F ../$PACKAGEDIR/$R
+        else
+            if [ -d "$file" ]; then
+                cp -r "$file" ../$PACKAGEDIR
+            elif [ -f "$file" ]; then
+                cp "$file" ../$PACKAGEDIR
+            else
+                echo "Invalid file: $file specified for packaging, skipping..."
+            fi
+        fi
+    done
+    rm -f files
+}
+
+function determineMvnBuild()
+{
+    while read configEntry
+    do
+        if [ ${configEntry:0:9} = "MVN_BUILD" ]; then
+            MVN_BUILD=`echo $configEntry | cut -d: -f2-`
+        fi
+    done < config
+    echo $MVN_BUILD
+}
+
+function determineHost()
+{
+    while read configEntry
+    do
+        if [ ${configEntry:0:4} = "HOST" ]; then
+            HOST=`echo $configEntry | cut -d: -f2`
+        fi
+    done < config
+    echo $HOST
+}
+#rm -f config
+
+function determineUser()
+{
+    if [ -z "$NCIBI_USER" ]; then
+        NCIBI_USER=`whoami`
+        /bin/echo -n "User?[$NCIBI_USER]"
+        read
+        if [ ! -z "$REPLY" ]; then
+            NCIBI_USER=$REPLY
+        fi
+    fi
+
+    echo $NCIBI_USER
+}
+
+function knownPackage()
+{
+    FOUND=false
+    for package in "production" "test" "tcbeta" "local" "web01" "tikal"
+    do
+        if [ "$1" = "$package" ]; then
+            FOUND=true
+        fi
+    done
+    echo $FOUND
+}
+
+if [ $# -gt 2 -o $# -lt 1 ]; then
+    usage
+fi
+
+PACKAGE_TYPE=`echo $1 | cut -d: -f1`
+PACKAGE_OPTION=`echo $1 | cut -d: -f2 -s`
+
+if [ "$PACKAGE_TYPE" = "local" ]; then
+    PACKAGE_OPTION="local"
+fi
+
+KNOWN=$(knownPackage "$PACKAGE_TYPE")
+
+if [ "$KNOWN" = "false" ]; then
+    usage
+fi
+
+rm -rf save
+
+NCIBI_USER=$(determineUser)
+
+if [ $# -eq 2 ]; then
+    PACKAGE=$2
+else
+    PACKAGE=`basename ${PWD}`
+fi
+
+PACKAGEDIR="$PACKAGE".PACKAGE
+
+rm -rf ../$PACKAGEDIR
+rm -f ../$PACKAGE.tar.gz
+
+if [ ! -f src/main/resources/project.config ]; then
+    echo "Invalid: No project.config found."
+    exit 1
+fi
+
+PROPERTIES_FILE=`cat src/main/resources/project.config | grep project.name | cut -d'=' -f2`.properties
+
+mkdir save
+if [ -f src/main/resources/$PROPERTIES_FILE ]; then
+    mv src/main/resources/$PROPERTIES_FILE save
+fi
+
+mkdir ../$PACKAGEDIR
+
+echo "Downloading configuration files for project."
+
+if [ -z "$SVNPASSWORD" ]; then
+    /bin/echo -n "UMMS SVN server password:"
+    read -s
+    SVNPASSWORD="$REPLY"
+    echo ""
+fi
+loadPropertiesFile
+
+echo "Determining configuration for building, packaging, and transfering..."
+retrieve $PACKAGE_TYPE/$PACKAGE/config
+HOST=$(determineHost)
+MVN_BUILD=$(determineMvnBuild)
+
+rm -f config
+
+echo "Running build..."
+mvn clean > /dev/null 2>&1
+mvn -Dmaven.test.skip=true $MVN_BUILD > /dev/null 2>&1
+
+echo "Gathering files for package..."
+gatherFilesForPackage
+
+echo "Creating package..."
+cd ..
+tar czf $PACKAGE.tar.gz $PACKAGEDIR
+rm -rf $PACKAGEDIR
+
+echo "Cleaning up..."
+cd - > /dev/null
+if [ -f save/$PROPERTIES_FILE ]; then
+    mv save/$PROPERTIES_FILE src/main/resources
+fi
+
+rm -rf save
+cd ..
+
+if [ "$PACKAGE_OPTION"  = "local" ]; then
+    exit 0
+fi
+
+echo "Transfering package..."
+
+sftp $NCIBI_USER@$HOST << __FTP_COMMANDS__
+put $PACKAGE.tar.gz
+__FTP_COMMANDS__
+
+rm -f $PACKAGE.tar.gz

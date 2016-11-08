@@ -1,0 +1,892 @@
+------------------------------------------------------------------------
+r1271 | gtarcea | 2012-09-14 09:35:22 -0400 (Fri, 14 Sep 2012) | 1 line
+
+Added mouse test case.
+------------------------------------------------------------------------
+r1264 | ffarfan | 2012-06-25 11:07:22 -0400 (Mon, 25 Jun 2012) | 2 lines
+
+Added the new methods newLRPathThinkTaskSubmitterForCommand(...) and newGseaThinkTaskSubmitterForCommand(...) to allow resubmittal
+
+------------------------------------------------------------------------
+r1255 | gtarcea | 2012-06-01 16:08:12 -0400 (Fri, 01 Jun 2012) | 2 lines
+
+Remove debug
+
+------------------------------------------------------------------------
+r1251 | gtarcea | 2012-05-11 12:48:10 -0400 (Fri, 11 May 2012) | 2 lines
+
+Updates to get thinkback working.
+
+------------------------------------------------------------------------
+r1250 | gtarcea | 2012-05-11 10:41:53 -0400 (Fri, 11 May 2012) | 2 lines
+
+Latest version of jar.
+
+------------------------------------------------------------------------
+r1249 | ffarfan | 2012-05-10 18:04:18 -0400 (Thu, 10 May 2012) | 1 line
+
+Debugging script
+------------------------------------------------------------------------
+r1247 | gtarcea | 2012-05-10 08:58:46 -0400 (Thu, 10 May 2012) | 2 lines
+
+Update jar dependencies.
+
+------------------------------------------------------------------------
+r1243 | ffarfan | 2012-04-30 12:15:58 -0400 (Mon, 30 Apr 2012) | 1 line
+
+Correction to script
+------------------------------------------------------------------------
+r1204 | gtarcea | 2012-04-06 13:01:57 -0400 (Fri, 06 Apr 2012) | 3 lines
+
+Remove old script.
+
+
+------------------------------------------------------------------------
+r1193 | vmahavis | 2012-04-03 09:44:42 -0400 (Tue, 03 Apr 2012) | 1 line
+
+db
+------------------------------------------------------------------------
+r1170 | gtarcea | 2012-03-27 10:27:12 -0400 (Tue, 27 Mar 2012) | 1 line
+
+Handle database exceptions gracefully by assuming they are transient and retrying.
+------------------------------------------------------------------------
+r1087 | gtarcea | 2012-02-16 15:21:08 -0500 (Thu, 16 Feb 2012) | 2 lines
+
+Use bash
+
+------------------------------------------------------------------------
+r1086 | gtarcea | 2012-02-16 15:16:04 -0500 (Thu, 16 Feb 2012) | 3 lines
+
+Change to bash
+
+
+------------------------------------------------------------------------
+r1000 | gtarcea | 2012-01-23 13:18:25 -0500 (Mon, 23 Jan 2012) | 1 line
+
+Catch task exceptions, log them, and mark task as failing. This prevents the executor from exiting when a task throws an exception.
+------------------------------------------------------------------------
+r868 | gtarcea | 2011-11-14 11:39:09 -0500 (Mon, 14 Nov 2011) | 1 line
+
+Remove class reference that no longer exists.
+------------------------------------------------------------------------
+r867 | gtarcea | 2011-11-14 11:16:07 -0500 (Mon, 14 Nov 2011) | 2 lines
+
+Fix install bug.
+
+------------------------------------------------------------------------
+r866 | gtarcea | 2011-11-14 11:10:24 -0500 (Mon, 14 Nov 2011) | 2 lines
+
+add path for script.
+
+------------------------------------------------------------------------
+r865 | gtarcea | 2011-11-14 10:41:54 -0500 (Mon, 14 Nov 2011) | 1 line
+
+Update installation for executor to include new jars from thinkback and renamed and added scripts.
+------------------------------------------------------------------------
+r847 | ffarfan | 2011-11-07 15:54:45 -0500 (Mon, 07 Nov 2011) | 2 lines
+
+Changes to accomodate List of pathways as argument
+Changes to call new Web service driver
+------------------------------------------------------------------------
+r819 | ffarfan | 2011-10-25 14:51:37 -0400 (Tue, 25 Oct 2011) | 1 line
+
+LRPath - THINK-Back integration: TaskExecutors
+------------------------------------------------------------------------
+r813 | gtarcea | 2011-10-21 16:04:10 -0400 (Fri, 21 Oct 2011) | 1 line
+
+Add in fix for m2e.
+------------------------------------------------------------------------
+r808 | ffarfan | 2011-10-20 16:35:35 -0400 (Thu, 20 Oct 2011) | 1 line
+
+ThinkBack-GSEA and ThinkBack-LRpath
+------------------------------------------------------------------------
+r791 | ffarfan | 2011-10-06 10:49:05 -0400 (Thu, 06 Oct 2011) | 1 line
+
+Changes to ThinkbackArgs
+------------------------------------------------------------------------
+r764 | gtarcea | 2011-10-04 16:04:46 -0400 (Tue, 04 Oct 2011) | 1 line
+
+Fix up poor formatting.
+------------------------------------------------------------------------
+r763 | gtarcea | 2011-10-04 15:39:02 -0400 (Tue, 04 Oct 2011) | 1 line
+
+Add manifest
+------------------------------------------------------------------------
+r759 | weymouth | 2011-10-04 13:18:46 -0400 (Tue, 04 Oct 2011) | 1 line
+
+add test for configuration file logging
+------------------------------------------------------------------------
+r758 | weymouth | 2011-10-04 11:48:39 -0400 (Tue, 04 Oct 2011) | 1 line
+
+added logging of overridden properties
+------------------------------------------------------------------------
+r690 | vmahavis | 2011-08-29 16:50:34 -0400 (Mon, 29 Aug 2011) | 1 line
+
+changed params
+------------------------------------------------------------------------
+r689 | gtarcea | 2011-08-29 11:05:32 -0400 (Mon, 29 Aug 2011) | 2 lines
+
+Make bash
+
+------------------------------------------------------------------------
+r688 | vmahavis | 2011-08-24 11:27:28 -0400 (Wed, 24 Aug 2011) | 2 lines
+
+change in db properties
+
+------------------------------------------------------------------------
+r684 | gtarcea | 2011-08-18 15:55:39 -0400 (Thu, 18 Aug 2011) | 3 lines
+
+Snowball-0004
+
+Remove LRPathArgs from persistence.xml files.
+------------------------------------------------------------------------
+r683 | vmahavis | 2011-08-18 14:42:01 -0400 (Thu, 18 Aug 2011) | 1 line
+
+Change database from conceptgen to _vmahavis 
+------------------------------------------------------------------------
+r682 | gtarcea | 2011-08-18 14:29:37 -0400 (Thu, 18 Aug 2011) | 3 lines
+
+Lilly-0001
+
+Remove all references to LRPathArgs
+------------------------------------------------------------------------
+r679 | gtarcea | 2011-08-17 16:43:38 -0400 (Wed, 17 Aug 2011) | 3 lines
+
+Lilly-0004
+
+Correct username and password.
+------------------------------------------------------------------------
+r678 | gtarcea | 2011-08-17 16:17:02 -0400 (Wed, 17 Aug 2011) | 5 lines
+
+Snowball-0004
+
+Fixed up executor to use the new interfaces for retrieving objects from the system by placing them in ServiceArguments table. This card only changed LRPath code path. The others still use the original way of doing things.
+
+We created a few simple unit tests for the changes.
+------------------------------------------------------------------------
+r677 | vmahavis | 2011-08-17 09:40:42 -0400 (Wed, 17 Aug 2011) | 1 line
+
+Changes in sql from oracle to sqlserver
+------------------------------------------------------------------------
+r672 | weymouth | 2011-08-10 11:47:32 -0400 (Wed, 10 Aug 2011) | 1 line
+
+building task queue and DB for LRPath - Card: Snowball - 0001D. Code in ws-ncibi does not compile; no unit test; incomplete.
+------------------------------------------------------------------------
+r671 | weymouth | 2011-08-10 09:58:21 -0400 (Wed, 10 Aug 2011) | 1 line
+
+Remove LRPathArgs references and update code to use LRPathArguments in its place.
+------------------------------------------------------------------------
+r670 | weymouth | 2011-08-10 09:53:15 -0400 (Wed, 10 Aug 2011) | 1 line
+
+
+------------------------------------------------------------------------
+r668 | gtarcea | 2011-08-01 15:26:34 -0400 (Mon, 01 Aug 2011) | 1 line
+
+Change get/set CommandType to get/set TaskType.
+------------------------------------------------------------------------
+r667 | gtarcea | 2011-08-01 15:17:17 -0400 (Mon, 01 Aug 2011) | 1 line
+
+Change CommandType to TaskType to better describe the type. Update the TaskDequeuer interface to allow for dequeueing any type of task.
+------------------------------------------------------------------------
+r666 | gtarcea | 2011-08-01 12:51:19 -0400 (Mon, 01 Aug 2011) | 1 line
+
+Start moving task dequeuing over to an interface.
+------------------------------------------------------------------------
+r665 | gtarcea | 2011-07-29 15:07:15 -0400 (Fri, 29 Jul 2011) | 1 line
+
+Add support for RabbitMQ.
+------------------------------------------------------------------------
+r603 | gtarcea | 2011-06-16 13:15:58 -0400 (Thu, 16 Jun 2011) | 2 lines
+
+Show command and fix shell script (should have been using java rather than jar).
+
+------------------------------------------------------------------------
+r598 | gtarcea | 2011-06-10 15:40:40 -0400 (Fri, 10 Jun 2011) | 2 lines
+
+Remove files after processing.
+
+------------------------------------------------------------------------
+r597 | gtarcea | 2011-06-10 15:39:15 -0400 (Fri, 10 Jun 2011) | 1 line
+
+Add support for Thinkback.
+------------------------------------------------------------------------
+r594 | gtarcea | 2011-06-02 15:38:11 -0400 (Thu, 02 Jun 2011) | 3 lines
+
+Updated to package, build and install a smaller jar with all the dependent jars installed in a lib directory and included in the classpath. Updated S80ncibiexecutor to function with the new jar and fixed up its output since the inclusion of a long class path was making it difficult to discern running processes.
+
+
+------------------------------------------------------------------------
+r583 | gtarcea | 2011-05-11 16:00:16 -0400 (Wed, 11 May 2011) | 1 line
+
+Update persistence.xml to include ThinkbackArgs and clean up NCIBIWebServiceApplication to remove warnings.
+------------------------------------------------------------------------
+r547 | gtarcea | 2011-04-20 16:15:48 -0400 (Wed, 20 Apr 2011) | 1 line
+
+Remove empty package.
+------------------------------------------------------------------------
+r546 | gtarcea | 2011-04-20 16:14:55 -0400 (Wed, 20 Apr 2011) | 1 line
+
+Remove unused classes.
+------------------------------------------------------------------------
+r545 | gtarcea | 2011-04-20 13:59:28 -0400 (Wed, 20 Apr 2011) | 1 line
+
+Cleanup pom.
+------------------------------------------------------------------------
+r544 | gtarcea | 2011-04-20 13:57:30 -0400 (Wed, 20 Apr 2011) | 1 line
+
+Remove files that were moved to ws-server-common.
+------------------------------------------------------------------------
+r543 | gtarcea | 2011-04-20 13:54:48 -0400 (Wed, 20 Apr 2011) | 1 line
+
+Remove file that we moved to ws-server-common.
+------------------------------------------------------------------------
+r536 | gtarcea | 2011-04-20 12:24:56 -0400 (Wed, 20 Apr 2011) | 2 lines
+
+Cleanup pom
+
+------------------------------------------------------------------------
+r496 | gtarcea | 2011-04-05 15:21:09 -0400 (Tue, 05 Apr 2011) | 1 line
+
+Move client dependency code to client.
+------------------------------------------------------------------------
+r493 | gtarcea | 2011-04-05 13:19:26 -0400 (Tue, 05 Apr 2011) | 1 line
+
+Add properties.
+------------------------------------------------------------------------
+r491 | gtarcea | 2011-04-04 13:00:44 -0400 (Mon, 04 Apr 2011) | 2 lines
+
+Only archive log on startup.
+
+------------------------------------------------------------------------
+r490 | gtarcea | 2011-04-04 13:00:28 -0400 (Mon, 04 Apr 2011) | 2 lines
+
+Remove file and not script.
+
+------------------------------------------------------------------------
+r489 | gtarcea | 2011-04-04 10:33:39 -0400 (Mon, 04 Apr 2011) | 2 lines
+
+Update install to prompt to start executor.
+
+------------------------------------------------------------------------
+r483 | gtarcea | 2011-03-31 22:05:20 -0400 (Thu, 31 Mar 2011) | 2 lines
+
+Don't redirect $1 (doesn't read from stdin).
+
+------------------------------------------------------------------------
+r482 | gtarcea | 2011-03-31 15:26:00 -0400 (Thu, 31 Mar 2011) | 1 line
+
+Refactor to allow different types of queues (that limit the types of messages they will process).
+------------------------------------------------------------------------
+r481 | gtarcea | 2011-03-31 15:10:10 -0400 (Thu, 31 Mar 2011) | 1 line
+
+Remove warnings.
+------------------------------------------------------------------------
+r480 | gtarcea | 2011-03-31 15:08:53 -0400 (Thu, 31 Mar 2011) | 1 line
+
+Move back to TaskDequeuer. Selection needs to be in message queue interface.
+------------------------------------------------------------------------
+r479 | gtarcea | 2011-03-31 14:59:31 -0400 (Thu, 31 Mar 2011) | 1 line
+
+Make TaskDequeuer an interface so that we can support different types of dequeuers.
+------------------------------------------------------------------------
+r478 | gtarcea | 2011-03-31 14:28:04 -0400 (Thu, 31 Mar 2011) | 1 line
+
+No longer write the PID.
+------------------------------------------------------------------------
+r477 | gtarcea | 2011-03-31 13:03:20 -0400 (Thu, 31 Mar 2011) | 1 line
+
+Have the stanford parser write its output as one single entry.
+------------------------------------------------------------------------
+r476 | gtarcea | 2011-03-30 17:06:22 -0400 (Wed, 30 Mar 2011) | 1 line
+
+Remove auto generated comment.
+------------------------------------------------------------------------
+r475 | gtarcea | 2011-03-30 16:25:36 -0400 (Wed, 30 Mar 2011) | 1 line
+
+Rename STANFORD_SENTENCE_PARSER to STANFORD_PARSER to fit into 16 character limit in field of database.
+------------------------------------------------------------------------
+r471 | gtarcea | 2011-03-30 14:40:40 -0400 (Wed, 30 Mar 2011) | 2 lines
+
+Fix up startup message.
+
+------------------------------------------------------------------------
+r466 | gtarcea | 2011-03-29 15:33:56 -0400 (Tue, 29 Mar 2011) | 1 line
+
+Remove debug code.
+------------------------------------------------------------------------
+r464 | gtarcea | 2011-03-29 14:08:25 -0400 (Tue, 29 Mar 2011) | 2 lines
+
+Fix up install.sh
+
+------------------------------------------------------------------------
+r460 | gtarcea | 2011-03-29 11:18:27 -0400 (Tue, 29 Mar 2011) | 1 line
+
+Rename NcibiXStreamMxTerminatorEncoder to NcibiXStreamNlpEncoder (and resultant affected files).
+------------------------------------------------------------------------
+r459 | gtarcea | 2011-03-29 11:10:14 -0400 (Tue, 29 Mar 2011) | 7 lines
+
+Add support for stanford parser.
+
+Updated install scripts.
+
+Removed MxTerminatorTaskExecutor and replaced with a general NlpTaskExecutor.
+
+Reworked how nlp scripts are called since the logic is mostly the same across scripts. So I broke it into two pieces - one script that contains the general logic which then calls another script (passed in as an argument) that contains the specific logic for that NLP type call.
+------------------------------------------------------------------------
+r458 | vmahavis | 2011-03-28 15:15:53 -0400 (Mon, 28 Mar 2011) | 1 line
+
+a
+------------------------------------------------------------------------
+r457 | gtarcea | 2011-03-24 17:31:24 -0400 (Thu, 24 Mar 2011) | 1 line
+
+Make the process that is being killed is an executor.
+------------------------------------------------------------------------
+r456 | gtarcea | 2011-03-24 17:07:02 -0400 (Thu, 24 Mar 2011) | 1 line
+
+Use static ProjectConfiguration.getProjectProperty (and defaulted version) so that properties can be overridden.
+------------------------------------------------------------------------
+r455 | gtarcea | 2011-03-24 16:36:41 -0400 (Thu, 24 Mar 2011) | 2 lines
+
+Add check for /etc/ncibi-executor.config file to override defaults.
+
+------------------------------------------------------------------------
+r454 | gtarcea | 2011-03-24 16:31:22 -0400 (Thu, 24 Mar 2011) | 2 lines
+
+Set permissions. Add placement of main_server into $NCIBI_HOME
+
+------------------------------------------------------------------------
+r453 | gtarcea | 2011-03-24 15:37:40 -0400 (Thu, 24 Mar 2011) | 1 line
+
+Fix up startup script to work with refactored executor. Now resubmittal doesn't happen automatically by the executor. Instead the startup script checks if it is running on a main server. If so it runs the resubmit before doing startup.
+------------------------------------------------------------------------
+r452 | gtarcea | 2011-03-24 15:25:45 -0400 (Thu, 24 Mar 2011) | 1 line
+
+Remove unneeded method for initializing PersistenceSession, move logic up.
+------------------------------------------------------------------------
+r451 | gtarcea | 2011-03-24 15:23:36 -0400 (Thu, 24 Mar 2011) | 1 line
+
+Refactor main to use Configuration, Submitter and Executor classes.
+------------------------------------------------------------------------
+r450 | gtarcea | 2011-03-24 15:23:14 -0400 (Thu, 24 Mar 2011) | 1 line
+
+method resubmitTaskByCommandType should be private.
+------------------------------------------------------------------------
+r449 | gtarcea | 2011-03-24 15:22:15 -0400 (Thu, 24 Mar 2011) | 1 line
+
+Move display of configuration logic into a separate class.
+------------------------------------------------------------------------
+r448 | gtarcea | 2011-03-24 15:01:11 -0400 (Thu, 24 Mar 2011) | 1 line
+
+Add class for executing tasks. This is logic that is contained in main and is being broken out.
+------------------------------------------------------------------------
+r447 | gtarcea | 2011-03-24 14:48:17 -0400 (Thu, 24 Mar 2011) | 1 line
+
+Classes to abstract out resubmission of tasks.
+------------------------------------------------------------------------
+r446 | gtarcea | 2011-03-24 13:25:52 -0400 (Thu, 24 Mar 2011) | 1 line
+
+Move classes around and create interface for task resubmission.
+------------------------------------------------------------------------
+r445 | gtarcea | 2011-03-24 12:03:55 -0400 (Thu, 24 Mar 2011) | 1 line
+
+Remove debug println statements.
+------------------------------------------------------------------------
+r442 | gtarcea | 2011-03-23 15:26:03 -0400 (Wed, 23 Mar 2011) | 2 lines
+
+Update permissions on directories and scripts.
+
+------------------------------------------------------------------------
+r441 | vmahavis | 2011-03-23 10:01:15 -0400 (Wed, 23 Mar 2011) | 1 line
+
+s
+------------------------------------------------------------------------
+r439 | gtarcea | 2011-03-21 15:59:22 -0400 (Mon, 21 Mar 2011) | 1 line
+
+Commit classes in preparation for breaking the main class up.
+------------------------------------------------------------------------
+r432 | gtarcea | 2011-03-17 11:36:08 -0400 (Thu, 17 Mar 2011) | 2 lines
+
+Updates for new install, including handling the install of nlp.
+
+------------------------------------------------------------------------
+r419 | gtarcea | 2011-03-15 15:44:27 -0400 (Tue, 15 Mar 2011) | 1 line
+
+Cleanup output.
+------------------------------------------------------------------------
+r418 | gtarcea | 2011-03-15 15:41:33 -0400 (Tue, 15 Mar 2011) | 1 line
+
+Add pid to config.
+------------------------------------------------------------------------
+r417 | gtarcea | 2011-03-15 15:39:33 -0400 (Tue, 15 Mar 2011) | 1 line
+
+Syntax error - forgot quote.
+------------------------------------------------------------------------
+r416 | gtarcea | 2011-03-15 15:38:14 -0400 (Tue, 15 Mar 2011) | 1 line
+
+Check for run_executor.sh and fix up error message.
+------------------------------------------------------------------------
+r415 | gtarcea | 2011-03-15 15:30:29 -0400 (Tue, 15 Mar 2011) | 1 line
+
+Only copy to /etc/rc4.d if we are on a Linux system.
+------------------------------------------------------------------------
+r414 | gtarcea | 2011-03-15 14:58:30 -0400 (Tue, 15 Mar 2011) | 1 line
+
+Added bap.sh to build and package up an install of the executor. Updated the README to reflect new procedure. Updated install.sh to work with new packaging.
+------------------------------------------------------------------------
+r413 | gtarcea | 2011-03-15 14:14:48 -0400 (Tue, 15 Mar 2011) | 1 line
+
+Add message about which pid we are killing.
+------------------------------------------------------------------------
+r412 | gtarcea | 2011-03-15 14:12:35 -0400 (Tue, 15 Mar 2011) | 1 line
+
+Updated usage message.
+------------------------------------------------------------------------
+r411 | gtarcea | 2011-03-15 14:12:09 -0400 (Tue, 15 Mar 2011) | 1 line
+
+Updated README to the new documentation on starting/stopping/setup.
+------------------------------------------------------------------------
+r410 | gtarcea | 2011-03-15 13:52:27 -0400 (Tue, 15 Mar 2011) | 1 line
+
+Add id (pid) to logging to distinguish between different executors.
+------------------------------------------------------------------------
+r409 | gtarcea | 2011-03-15 13:20:49 -0400 (Tue, 15 Mar 2011) | 2 lines
+
+Setup running the executor.
+
+------------------------------------------------------------------------
+r404 | gtarcea | 2011-03-11 15:26:26 -0500 (Fri, 11 Mar 2011) | 1 line
+
+Move S80ncibiexecutor to src/scripts. Update script to use NCIBI_HOME environment variable and to set up logs, etc..
+------------------------------------------------------------------------
+r403 | gtarcea | 2011-03-11 13:10:14 -0500 (Fri, 11 Mar 2011) | 1 line
+
+Enhance logging of the executor to make it easier to see what is going on.
+------------------------------------------------------------------------
+r399 | gtarcea | 2011-03-03 15:58:38 -0500 (Thu, 03 Mar 2011) | 1 line
+
+Update template.
+------------------------------------------------------------------------
+r397 | vmahavis | 2011-03-03 12:53:53 -0500 (Thu, 03 Mar 2011) | 1 line
+
+a
+------------------------------------------------------------------------
+r392 | gtarcea | 2011-02-28 14:42:56 -0500 (Mon, 28 Feb 2011) | 2 lines
+
+Template file to run service.
+
+------------------------------------------------------------------------
+r390 | vmahavis | 2011-02-28 11:47:20 -0500 (Mon, 28 Feb 2011) | 1 line
+
+a
+------------------------------------------------------------------------
+r386 | gtarcea | 2011-02-24 13:51:32 -0500 (Thu, 24 Feb 2011) | 1 line
+
+Always reconnect to the RServer on every request.
+------------------------------------------------------------------------
+r380 | gtarcea | 2011-02-22 15:52:14 -0500 (Tue, 22 Feb 2011) | 1 line
+
+Remove commented out code.
+------------------------------------------------------------------------
+r378 | weymouth | 2011-02-22 13:52:14 -0500 (Tue, 22 Feb 2011) | 1 line
+
+clean up the properties template
+------------------------------------------------------------------------
+r369 | vmahavis | 2011-02-17 10:34:27 -0500 (Thu, 17 Feb 2011) | 1 line
+
+conceptgen sql server
+------------------------------------------------------------------------
+r355 | weymouth | 2011-02-15 08:03:41 -0500 (Tue, 15 Feb 2011) | 1 line
+
+update executor rc (startup) script to match the one used in mimi.ncibi.org and mimitest.ncibi.org
+------------------------------------------------------------------------
+r350 | weymouth | 2011-02-09 10:58:29 -0500 (Wed, 09 Feb 2011) | 1 line
+
+updated from latest release branch
+------------------------------------------------------------------------
+r333 | gtarcea | 2011-02-03 20:38:03 -0500 (Thu, 03 Feb 2011) | 1 line
+
+
+------------------------------------------------------------------------
+r327 | gtarcea | 2011-02-03 16:30:47 -0500 (Thu, 03 Feb 2011) | 1 line
+
+Add support for MxTerminator calls into ncibi-executor and serialization to XStream.
+------------------------------------------------------------------------
+r325 | gtarcea | 2011-02-03 10:39:59 -0500 (Thu, 03 Feb 2011) | 1 line
+
+MxPost integration and extensions.
+------------------------------------------------------------------------
+r324 | gtarcea | 2011-02-02 16:52:38 -0500 (Wed, 02 Feb 2011) | 1 line
+
+Integration for MxTerminator.
+------------------------------------------------------------------------
+r323 | weymouth | 2011-02-02 16:34:22 -0500 (Wed, 02 Feb 2011) | 1 line
+
+credentials.properties.template is no longer needed
+------------------------------------------------------------------------
+r320 | gtarcea | 2011-02-02 13:27:39 -0500 (Wed, 02 Feb 2011) | 1 line
+
+Debugging test updates.
+------------------------------------------------------------------------
+r319 | gtarcea | 2011-02-02 13:22:39 -0500 (Wed, 02 Feb 2011) | 3 lines
+
+Move to commons.
+
+
+------------------------------------------------------------------------
+r318 | gtarcea | 2011-02-02 13:20:09 -0500 (Wed, 02 Feb 2011) | 1 line
+
+Add debug tests. Make ShellScriptExternalProcess work across both Unix and Windows.
+------------------------------------------------------------------------
+r312 | vmahavis | 2011-02-01 12:01:12 -0500 (Tue, 01 Feb 2011) | 1 line
+
+lrpath test files
+------------------------------------------------------------------------
+r309 | gtarcea | 2011-01-31 16:42:11 -0500 (Mon, 31 Jan 2011) | 2 lines
+
+Add rc command for linux to start the executor.
+
+------------------------------------------------------------------------
+r306 | gtarcea | 2011-01-28 15:43:49 -0500 (Fri, 28 Jan 2011) | 1 line
+
+A little refactoring I should probably break the main up into a few separate clases - there are too many static functions.
+------------------------------------------------------------------------
+r305 | gtarcea | 2011-01-28 14:28:45 -0500 (Fri, 28 Jan 2011) | 1 line
+
+Update property templates to show other example values.
+------------------------------------------------------------------------
+r304 | gtarcea | 2011-01-28 14:23:57 -0500 (Fri, 28 Jan 2011) | 1 line
+
+Setup for using NSecondsPoller. Handle queue stopped processing events.
+------------------------------------------------------------------------
+r301 | vmahavis | 2011-01-28 13:32:28 -0500 (Fri, 28 Jan 2011) | 1 line
+
+a
+------------------------------------------------------------------------
+r299 | gtarcea | 2011-01-28 12:57:59 -0500 (Fri, 28 Jan 2011) | 1 line
+
+Rename SQSConfiguration to MessageQueueConfiguration since it applies to all the message queues and their possible configurations.
+------------------------------------------------------------------------
+r298 | gtarcea | 2011-01-28 12:56:09 -0500 (Fri, 28 Jan 2011) | 1 line
+
+Make Poller an interface that works on MessageQueue rather than on SQSQueue. Reimplement the existing Pollers to this new interface and move to new package. Update existing code to new interfaces.
+------------------------------------------------------------------------
+r297 | gtarcea | 2011-01-27 16:52:03 -0500 (Thu, 27 Jan 2011) | 1 line
+
+Remove extra lines.
+------------------------------------------------------------------------
+r296 | gtarcea | 2011-01-27 14:46:05 -0500 (Thu, 27 Jan 2011) | 1 line
+
+Debug Persistence queue interface.
+------------------------------------------------------------------------
+r292 | gtarcea | 2011-01-26 14:10:59 -0500 (Wed, 26 Jan 2011) | 1 line
+
+Remove non-existent class from persistence mapping.
+------------------------------------------------------------------------
+r291 | gtarcea | 2011-01-26 12:14:35 -0500 (Wed, 26 Jan 2011) | 1 line
+
+Code changes to remove ncibi-db dependency from metscape2-plugin for the Task and TaskStatus class and enum. POMs not updated yet.
+------------------------------------------------------------------------
+r290 | vmahavis | 2011-01-26 09:18:22 -0500 (Wed, 26 Jan 2011) | 1 line
+
+
+------------------------------------------------------------------------
+r289 | gtarcea | 2011-01-25 15:14:16 -0500 (Tue, 25 Jan 2011) | 1 line
+
+Add QueueMessage type to task database.
+------------------------------------------------------------------------
+r283 | gtarcea | 2011-01-21 17:02:34 -0500 (Fri, 21 Jan 2011) | 1 line
+
+Take out path to shell.
+------------------------------------------------------------------------
+r281 | gtarcea | 2011-01-21 14:22:21 -0500 (Fri, 21 Jan 2011) | 1 line
+
+Rename class. Close out BufferedReader
+------------------------------------------------------------------------
+r278 | gtarcea | 2011-01-20 16:07:37 -0500 (Thu, 20 Jan 2011) | 1 line
+
+Move lrpath-lib into ws-ncibi-executor, and move out one class that needs to be shared.
+------------------------------------------------------------------------
+r277 | gtarcea | 2011-01-20 11:30:40 -0500 (Thu, 20 Jan 2011) | 1 line
+
+Create interface for running external processes.
+------------------------------------------------------------------------
+r276 | gtarcea | 2011-01-20 10:42:29 -0500 (Thu, 20 Jan 2011) | 1 line
+
+More moving around classes and creating packages.
+------------------------------------------------------------------------
+r275 | gtarcea | 2011-01-20 10:31:37 -0500 (Thu, 20 Jan 2011) | 1 line
+
+Update pom to reflect new placement of main.
+------------------------------------------------------------------------
+r274 | gtarcea | 2011-01-20 10:30:13 -0500 (Thu, 20 Jan 2011) | 1 line
+
+Move classes around in preparation for expanding code base.
+------------------------------------------------------------------------
+r272 | gtarcea | 2011-01-19 17:02:29 -0500 (Wed, 19 Jan 2011) | 1 line
+
+Add spike for spawning processes in Java.
+------------------------------------------------------------------------
+r271 | gtarcea | 2011-01-19 17:02:06 -0500 (Wed, 19 Jan 2011) | 1 line
+
+Comment out unused method.
+------------------------------------------------------------------------
+r270 | gtarcea | 2011-01-19 17:01:04 -0500 (Wed, 19 Jan 2011) | 1 line
+
+Comment out unused code in placeholder.
+------------------------------------------------------------------------
+r269 | gtarcea | 2011-01-19 17:00:28 -0500 (Wed, 19 Jan 2011) | 1 line
+
+Place holder classes for sentence splitter.
+------------------------------------------------------------------------
+r266 | gtarcea | 2011-01-18 10:03:03 -0500 (Tue, 18 Jan 2011) | 2 lines
+
+Add queue to template.
+
+------------------------------------------------------------------------
+r262 | gtarcea | 2011-01-11 16:34:34 -0500 (Tue, 11 Jan 2011) | 1 line
+
+Set Task status before we write it to the task file.
+------------------------------------------------------------------------
+r260 | gtarcea | 2011-01-11 16:00:22 -0500 (Tue, 11 Jan 2011) | 1 line
+
+Print full stack trace to stdout.
+------------------------------------------------------------------------
+r257 | gtarcea | 2011-01-11 15:06:54 -0500 (Tue, 11 Jan 2011) | 1 line
+
+Remove sleep statement that was in there for synchronization debugging.
+------------------------------------------------------------------------
+r256 | gtarcea | 2011-01-11 15:03:53 -0500 (Tue, 11 Jan 2011) | 3 lines
+
+Fix bug where initialization lock was not released.
+
+Added status messages so we could see the progress of startup.
+------------------------------------------------------------------------
+r255 | gtarcea | 2011-01-11 15:03:11 -0500 (Tue, 11 Jan 2011) | 1 line
+
+Remove references to deleted class.
+------------------------------------------------------------------------
+r253 | vmahavis | 2011-01-11 09:44:57 -0500 (Tue, 11 Jan 2011) | 1 line
+
+a
+------------------------------------------------------------------------
+r249 | gtarcea | 2011-01-07 10:21:49 -0500 (Fri, 07 Jan 2011) | 1 line
+
+statusDir is no longer needed.
+------------------------------------------------------------------------
+r248 | gtarcea | 2011-01-06 16:50:21 -0500 (Thu, 06 Jan 2011) | 1 line
+
+Abstract to use TaskWriter interface rather than a specific implementation of the interface.
+------------------------------------------------------------------------
+r247 | gtarcea | 2011-01-06 16:46:20 -0500 (Thu, 06 Jan 2011) | 1 line
+
+Renamed FinishedTaskWriter to FileTaskWriter.
+------------------------------------------------------------------------
+r246 | gtarcea | 2011-01-06 16:44:54 -0500 (Thu, 06 Jan 2011) | 1 line
+
+FinishedTaskWriter was moved to a different package.
+------------------------------------------------------------------------
+r245 | gtarcea | 2011-01-06 16:40:08 -0500 (Thu, 06 Jan 2011) | 1 line
+
+FinishedTaskWriter was changed - abstract writer method was renamed to writeResults.
+------------------------------------------------------------------------
+r242 | gtarcea | 2011-01-06 12:42:36 -0500 (Thu, 06 Jan 2011) | 1 line
+
+Remove unused done() method (after updating unit test that was the only place method was called).
+------------------------------------------------------------------------
+r241 | gtarcea | 2011-01-06 12:39:43 -0500 (Thu, 06 Jan 2011) | 1 line
+
+Changed to accept args argument for FinishedTaskWriter (and all implementations, factories, etc...)
+------------------------------------------------------------------------
+r240 | gtarcea | 2011-01-06 09:37:26 -0500 (Thu, 06 Jan 2011) | 1 line
+
+Add extra logging.
+------------------------------------------------------------------------
+r239 | gtarcea | 2011-01-06 09:05:34 -0500 (Thu, 06 Jan 2011) | 1 line
+
+Move method to top to preserve order of calls.
+------------------------------------------------------------------------
+r238 | gtarcea | 2011-01-04 16:56:12 -0500 (Tue, 04 Jan 2011) | 1 line
+
+Change order of execution to keep arguments around if there is an exception thrown while trying to write the results.
+------------------------------------------------------------------------
+r237 | gtarcea | 2011-01-04 15:29:05 -0500 (Tue, 04 Jan 2011) | 1 line
+
+Add in cast and @SuppressWarnings("unchecked") because Eclipse will compile code while java will not.
+------------------------------------------------------------------------
+r233 | gtarcea | 2011-01-04 14:20:14 -0500 (Tue, 04 Jan 2011) | 1 line
+
+Update to new interfaces for MessageQueues.
+------------------------------------------------------------------------
+r231 | gtarcea | 2011-01-03 12:02:43 -0500 (Mon, 03 Jan 2011) | 1 line
+
+Setup error handling and restarting infrastructure.
+------------------------------------------------------------------------
+r230 | gtarcea | 2010-12-17 14:32:56 -0500 (Fri, 17 Dec 2010) | 1 line
+
+Abstract out common code. Move towards handling unfinished tasks.
+------------------------------------------------------------------------
+r229 | gtarcea | 2010-12-17 12:47:59 -0500 (Fri, 17 Dec 2010) | 1 line
+
+Start making changes (not called yet) to find uncompleted tasks and resubmit them.
+------------------------------------------------------------------------
+r226 | gtarcea | 2010-12-16 14:03:43 -0500 (Thu, 16 Dec 2010) | 1 line
+
+Reverse order of Queue and Persistence connections so that we fail quickly if persistence is mis-configured.
+------------------------------------------------------------------------
+r222 | gtarcea | 2010-12-15 07:33:22 -0500 (Wed, 15 Dec 2010) | 2 lines
+
+collapse
+
+------------------------------------------------------------------------
+r202 | gtarcea | 2010-12-08 09:33:15 -0500 (Wed, 08 Dec 2010) | 3 lines
+
+Write to console as well as the database.
+
+LRPathResult is now a list rather than an array.
+------------------------------------------------------------------------
+r197 | gtarcea | 2010-12-07 16:35:33 -0500 (Tue, 07 Dec 2010) | 1 line
+
+Update task status.
+------------------------------------------------------------------------
+r194 | gtarcea | 2010-12-07 14:27:33 -0500 (Tue, 07 Dec 2010) | 1 line
+
+Handle non-existent tasks (entries in queue that are no longer in the database).
+------------------------------------------------------------------------
+r190 | gtarcea | 2010-12-07 12:21:37 -0500 (Tue, 07 Dec 2010) | 1 line
+
+Updates from FinishedTaskWriter changes.
+------------------------------------------------------------------------
+r181 | gtarcea | 2010-12-03 16:13:58 -0500 (Fri, 03 Dec 2010) | 1 line
+
+Update to correct type of response.
+------------------------------------------------------------------------
+r165 | gtarcea | 2010-12-02 10:36:31 -0500 (Thu, 02 Dec 2010) | 1 line
+
+Add support for producing javax xml beans style xml.
+------------------------------------------------------------------------
+r162 | gtarcea | 2010-12-01 13:11:47 -0500 (Wed, 01 Dec 2010) | 1 line
+
+Change written results to XML.
+------------------------------------------------------------------------
+r160 | gtarcea | 2010-12-01 10:03:03 -0500 (Wed, 01 Dec 2010) | 2 lines
+
+Add README.txt
+
+------------------------------------------------------------------------
+r158 | gtarcea | 2010-11-24 15:14:17 -0500 (Wed, 24 Nov 2010) | 1 line
+
+Try adding a way to put all dependencies into a lib directory.
+------------------------------------------------------------------------
+r157 | gtarcea | 2010-11-24 14:54:35 -0500 (Wed, 24 Nov 2010) | 1 line
+
+Update to build a jar with a classpath in the manifest and a main program set.
+------------------------------------------------------------------------
+r156 | gtarcea | 2010-11-24 14:30:31 -0500 (Wed, 24 Nov 2010) | 2 lines
+
+Remove MANIFEST
+
+------------------------------------------------------------------------
+r155 | gtarcea | 2010-11-24 14:30:00 -0500 (Wed, 24 Nov 2010) | 2 lines
+
+Remove MANIFEST
+
+------------------------------------------------------------------------
+r154 | gtarcea | 2010-11-24 11:13:24 -0500 (Wed, 24 Nov 2010) | 2 lines
+
+Change build name. Add Manifest.
+
+------------------------------------------------------------------------
+r152 | gtarcea | 2010-11-24 10:14:09 -0500 (Wed, 24 Nov 2010) | 2 lines
+
+Update ignore list.
+
+------------------------------------------------------------------------
+r151 | gtarcea | 2010-11-24 10:09:20 -0500 (Wed, 24 Nov 2010) | 2 lines
+
+Add configuration template files.
+
+------------------------------------------------------------------------
+r148 | gtarcea | 2010-11-23 16:20:25 -0500 (Tue, 23 Nov 2010) | 1 line
+
+Add ProjectConfiguration to find the project directory (this should probably be injected).
+------------------------------------------------------------------------
+r140 | gtarcea | 2010-11-23 11:18:23 -0500 (Tue, 23 Nov 2010) | 2 lines
+
+Update ignore list.
+
+------------------------------------------------------------------------
+r139 | gtarcea | 2010-11-23 11:17:00 -0500 (Tue, 23 Nov 2010) | 2 lines
+
+Move file to template.
+
+------------------------------------------------------------------------
+r137 | gtarcea | 2010-11-23 11:09:49 -0500 (Tue, 23 Nov 2010) | 1 line
+
+Remove unused class.
+------------------------------------------------------------------------
+r136 | gtarcea | 2010-11-23 11:09:26 -0500 (Tue, 23 Nov 2010) | 1 line
+
+Update to use SQSConfiguration and RServerConfiguration.
+------------------------------------------------------------------------
+r116 | gtarcea | 2010-11-22 14:21:42 -0500 (Mon, 22 Nov 2010) | 1 line
+
+Moved TaskLogger and implementation to ws-aws.
+------------------------------------------------------------------------
+r114 | gtarcea | 2010-11-22 14:05:59 -0500 (Mon, 22 Nov 2010) | 1 line
+
+Add logging and miscellaneous code cleanup.
+------------------------------------------------------------------------
+r111 | gtarcea | 2010-11-22 11:25:31 -0500 (Mon, 22 Nov 2010) | 1 line
+
+Use SessionProcedure rather than SessionFunction<T>
+------------------------------------------------------------------------
+r110 | gtarcea | 2010-11-22 11:16:17 -0500 (Mon, 22 Nov 2010) | 1 line
+
+Fill out persistence task logger.
+------------------------------------------------------------------------
+r109 | gtarcea | 2010-11-19 17:26:09 -0500 (Fri, 19 Nov 2010) | 1 line
+
+Start filling out logic for LRPath executor.
+------------------------------------------------------------------------
+r108 | gtarcea | 2010-11-19 16:23:52 -0500 (Fri, 19 Nov 2010) | 1 line
+
+Remove unused import.
+------------------------------------------------------------------------
+r107 | gtarcea | 2010-11-19 16:12:08 -0500 (Fri, 19 Nov 2010) | 1 line
+
+Fill out more code and get a feel for the architecture and changes needed.
+------------------------------------------------------------------------
+r105 | gtarcea | 2010-11-19 15:14:16 -0500 (Fri, 19 Nov 2010) | 2 lines
+
+Check point checkin.
+
+------------------------------------------------------------------------
+r104 | gtarcea | 2010-11-19 12:35:16 -0500 (Fri, 19 Nov 2010) | 2 lines
+
+Add different types of executors and outline for main.
+
+------------------------------------------------------------------------
+r102 | gtarcea | 2010-11-18 16:13:40 -0500 (Thu, 18 Nov 2010) | 1 line
+
+Check point checkin.
+------------------------------------------------------------------------
+r99 | gtarcea | 2010-11-18 14:47:53 -0500 (Thu, 18 Nov 2010) | 2 lines
+
+Remove webapp (not a webapp)
+
+------------------------------------------------------------------------
+r98 | gtarcea | 2010-11-18 14:47:02 -0500 (Thu, 18 Nov 2010) | 2 lines
+
+Update ignore list.
+
+------------------------------------------------------------------------
+r97 | gtarcea | 2010-11-18 14:46:11 -0500 (Thu, 18 Nov 2010) | 2 lines
+
+Setup project.
+
+------------------------------------------------------------------------
+r94 | gtarcea | 2010-11-18 14:37:41 -0500 (Thu, 18 Nov 2010) | 2 lines
+
+Create trunk.
+
+------------------------------------------------------------------------
